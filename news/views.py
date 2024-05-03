@@ -29,3 +29,8 @@ def categories(request):
 
     context = {"form": form}
     return render(request, "categories_form.html", context)
+
+
+# Dúvida sobre tag Span
+# Dúvida sobre o CSS
+# Dúvida sobre a classe Meta para form
