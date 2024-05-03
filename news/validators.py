@@ -1,6 +1,10 @@
 from django.core.exceptions import ValidationError
 
 
-def validate_category_name(value):
-    if len(value) == 0 or len(value) < 200:
-        raise ValidationError("Invalid category name.")
+def validate_class_attributes(value):
+    if len(value) == 0:
+        raise ValidationError("Este campo não pode estar vazio.")
+    elif len(value) > 200:
+        raise ValidationError(
+            f"Certifique-se de que o valor tenha no máximo 200 caracteres (ele possui {len(value)})."  # noqa
+        )
